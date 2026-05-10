@@ -99,7 +99,7 @@ export default function SalesPage() {
                     <td style={{ padding: '1rem', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>{quote.id.substring(0, 8).toUpperCase()}</td>
                     <td style={{ padding: '1rem', fontWeight: 500 }}>{quote.customers?.company_name || 'Unknown'}</td>
                     <td style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{new Date(quote.created_at).toLocaleDateString()}</td>
-                    <td style={{ padding: '1rem' }}>${quote.total_amount.toLocaleString()}</td>
+                    <td style={{ padding: '1rem' }}>${quote.total_amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
                     <td style={{ padding: '1rem' }}>
                       <span style={{ 
                         padding: '0.25rem 0.75rem', 

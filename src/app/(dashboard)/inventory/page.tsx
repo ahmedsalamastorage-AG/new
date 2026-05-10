@@ -93,7 +93,7 @@ export default function InventoryPage() {
                       </span>
                     </td>
                     <td style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{product.condition}</td>
-                    <td style={{ padding: '1rem' }}>${product.price.toLocaleString()}</td>
+                    <td style={{ padding: '1rem' }}>${product.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
                     <td style={{ padding: '1rem' }}>
                       <span style={{ color: product.quantity > 0 ? 'var(--accent-success)' : 'var(--accent-danger)' }}>
                         {product.quantity}
